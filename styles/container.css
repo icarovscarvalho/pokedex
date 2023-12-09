@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  width: 90vw;
+  height: 95vw;
+  background: url(media/bg-branco.avif) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body header img {
+  max-width: 70px;
+  margin-bottom: 20px;
+}
+body main {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+}
+body section#container {
+  background: url(media/pokemon_field.png) bottom left no-repeat;
+  background-size: cover;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  border: 1.5px solid #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7411764706);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+body form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+body #poke-busca-campo {
+  margin-top: 50px;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7411764706);
+}
+body #poke-busca-campo input {
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #6d6d6d;
+  cursor: pointer;
+  background-color: #e4e4e4;
+}
+body #poke-busca-campo input::-webkit-input-placeholder {
+  font-size: 0.7rem;
+  text-transform: none;
+}
+body #poke-busca-campo input:focus {
+  outline: 0;
+}
+body #poke-busca-campo button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+body #poke-busca-campo button:hover {
+  scale: 1.2;
+  transition: 0.2s;
+}
+body #poke-busca-campo button:active {
+  rotate: 360deg;
+  transition: 0.2s;
+}
+body #poke-busca-campo img {
+  width: 25px;
+}
+body #poke-dados-campo {
+  padding: 20px;
+  width: 300px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7411764706);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #poke-dados-campo #poke-dados-campo-classSprit {
+  color: #858585;
+  font-weight: 500;
+  text-align: center;
+}
+body #poke-dados-campo #poke-dados-campo-classType {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+body #poke-dados-campo #poke-dados-campo-classType p {
+  margin-top: 10px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  padding: 0px 10px;
+  font-size: 0.8em;
+}
+body #poke-dados-campo img {
+  max-width: 150px;
+}/*# sourceMappingURL=container.css.map */
