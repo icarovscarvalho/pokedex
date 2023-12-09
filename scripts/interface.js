@@ -137,8 +137,14 @@ const createPokeballs= () => {
     img.onclick = clickPokeballInsiderInterface
     function clickPokeballInsiderInterface(){
         console.log('gotcha')
-        img.style.rotate = '720deg'
+        
         img.style.transition = '.5s'
+        img.style.transform = 'rotate(720deg)';
+ 
+        setTimeout(() => {
+            img.style.transform = 'rotate(0deg)';
+        }, 600);
+        
     }
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
     //MUDAR SKIN DA POKEBOLA
