@@ -1,0 +1,69 @@
+@mixin centralizacaoPadrao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin interfaceBar {
+    border: 1.5px solid #000000;
+    box-shadow: 0px 0px 10px #000000bd;
+    background-color: #fff;
+
+    &:hover {
+        animation: 1s linear 0s infinite alternate asideMoveShow;
+
+        @keyframes asideMoveShow {
+            from {
+                transform: translateY(7px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+
+        }
+    }
+}
+
+body {
+
+    main {
+
+        div#interfaceGroup {
+            
+            p{
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+
+                @include interfaceBar();
+                @include centralizacaoPadrao();
+                cursor: pointer;
+            }
+
+            #interface{
+                
+                @include interfaceBar();
+                @include centralizacaoPadrao();
+
+                section{
+                    height: 166px;
+                    @include centralizacaoPadrao();
+                    flex-direction: row;
+
+                    div{
+                        @include centralizacaoPadrao()
+                    }
+                }
+
+                img{
+                    cursor: pointer;
+                    width: 70px;
+                }
+            }
+
+        }
+
+    }
+}

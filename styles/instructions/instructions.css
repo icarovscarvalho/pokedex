@@ -1,0 +1,41 @@
+body main aside#professor-Oak {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1.5px solid #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7411764706);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body main aside#professor-Oak:hover {
+  animation: 1s linear 0s infinite alternate asideMoveShow;
+}
+@keyframes asideMoveShow {
+  from {
+    transform: translateY(7px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+body main aside#professor-Oak span {
+  font-size: 1.5rem;
+}
+body main aside#professor-Oak h2 {
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+body main aside#professor-Oak p.instructions {
+  margin-top: 30px;
+  border: 1.5px solid #000000;
+  border-radius: 10px;
+  padding: 8px;
+  text-transform: none;
+  text-align: center;
+}
+body main aside#professor-Oak img {
+  width: 150px;
+}/*# sourceMappingURL=instructions.css.map */

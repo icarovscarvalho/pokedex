@@ -32,11 +32,17 @@ function interfaceOpenClose() {
         blockVerifyInstructions = 'open'
         console.log(blockVerifyInstructions)
         //#PARAR o Hover nos asides após ABRIR a barra de aside
-        btnOpenClose.addEventListener('mouseover', ()=>{
-            btnOpenClose.style.animation = 'none'
-        })
 
         btnOpenClose.textContent = 'x'
+        // btnOpenClose.classList.remove('btnOpenClose')
+        // interfaceGroup.classList.add('interfaceGroupOpen')
+        // interface.classList.add('interfaceOpen')
+        interface.style.display = 'block'
+
+        // btnOpenClose.addEventListener('mouseover', ()=>{
+        //     interface.style.animation = 'none'
+        // })
+
         btnOpenClose.style.width = '25px'
         btnOpenClose.style.height = '25px'
         btnOpenClose.style.background = 'none'
@@ -49,7 +55,7 @@ function interfaceOpenClose() {
         interfaceGroup.style.alignItems = 'flex-end'
         interfaceGroup.style.justifyContent = 'center'
 
-        interface.style.display = 'block'
+        
 
         interface.style.borderRadius = '10px';
         interface.style.padding = '0px 20px'
@@ -63,6 +69,7 @@ function interfaceOpenClose() {
         interface.style.transition = '.5s ease-in-out .5s';
 
     }else{
+        interfaceGroup
         blockVerifyInstructions = 'close'
         console.log(blockVerifyInstructions)
 
@@ -72,6 +79,7 @@ function interfaceOpenClose() {
         })
 
         interface.style.display = 'none'
+        btnOpenClose.classList.remove('btnOpenInterface')
 
         btnOpenClose.style.borderRadius = '50%';
         btnOpenClose.style.padding = '0px'
@@ -133,18 +141,19 @@ const createPokeballs= () => {
 
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
     //INTERAÇÃO COM A POKEBOLA - FAVORITAR
-    img.style.cursor = 'pointer'
+    
     img.onclick = clickPokeballInsiderInterface
     function clickPokeballInsiderInterface(){
         console.log('gotcha')
         
-        img.style.transition = '.5s'
-        img.style.transform = 'rotate(720deg)';
+        img.classList.add('rotatePokeball')
+        //FAVORITAR STAR
+        spanStar.classList.add('getFavoritePkmon')
+        spanStar.textContent = 'star_half'
  
         setTimeout(() => {
-            img.style.transform = 'rotate(0deg)';
-        }, 600);
-        
+            img.classList.remove('rotatePokeball')
+        },600); 
     }
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
     //MUDAR SKIN DA POKEBOLA
@@ -155,9 +164,8 @@ const createPokeballs= () => {
     function changePokeball() {
         const masterball = img.src = `styles/media/${skins[2]}`
     }
-
-    return section;
+    
 }
-
+//====>====>====>====>====>====>====>====>====>
 const [slotBase1, slotBase2, slotBase3] = [createPokeballs(),createPokeballs(),createPokeballs()]
 //====>====>====>====>====>====>====>====>====>
