@@ -161,8 +161,14 @@ const createPokeballs= () => {
 
     spanChangeCircle.style.cursor = 'pointer'
     spanChangeCircle.onclick = changePokeball
+
+    let index = 0
+
     function changePokeball() {
-        const masterball = img.src = `styles/media/${skins[2]}`
+        // const masterball = img.src = `styles/media/${skins[2]}`
+        index = (index + 1) % skins.length;
+        console.log(index)
+        img.src = `styles/media/${skins[index]}`
     }
     
 }

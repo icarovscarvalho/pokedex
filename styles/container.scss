@@ -43,10 +43,9 @@ body {
         display: flex;
         column-gap: 20px;
         align-items: center;
-        }
-        
+    }
 
-    section#container{
+    section.containerBG {
         background: url(media/pokemon_field.png) bottom left no-repeat;
         background-size: cover;
         padding: 20px;
@@ -55,12 +54,45 @@ body {
         border-radius: 10px;
         border: 1.5px solid #000000;
         box-shadow: 0px 0px 10px #000000bd;
+    }
+        
 
+    section#container{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         gap: 20px;
+
+        .dark-mode-field-OFF{
+            width: 50px;
+            height: 20px;
+            padding: 2px;
+            border: 1.5px solid #000;
+            box-shadow: 0px 0px 3px #000000ce;
+            border-radius: 30px;
+            background-color: #fc9797;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row-reverse;
+            column-gap: 5px;
+
+            p{
+                font-size: .7rem;
+            }
+
+            .dark-mode-selector{
+                width: 15px;
+                height: 15px;
+                border: 1.5px solid #000;
+                box-shadow: 0px 0px 3px #000000ce;
+                border-radius: 50%;
+                background-color: rgb(194, 189, 189);
+            }
+        }
     }
 
     form{

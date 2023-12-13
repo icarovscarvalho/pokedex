@@ -6,10 +6,6 @@
 }
 
 @mixin interfaceBar {
-    border: 1.5px solid #000000;
-    box-shadow: 0px 0px 10px #000000bd;
-    background-color: #fff;
-
     &:hover {
         animation: 1s linear 0s infinite alternate asideMoveShow;
 
@@ -30,39 +26,43 @@ body {
 
     main {
 
-        div#interfaceGroup {
-            
-            p{
+        .interfaceGroupLight{
+            p {
                 height: 70px;
                 width: 70px;
                 border-radius: 50%;
-
+                border: 1.5px solid #000000;
+                box-shadow: 0px 0px 10px #000000bd;
+                background-color: #fff;
+        
                 @include interfaceBar();
                 @include centralizacaoPadrao();
                 cursor: pointer;
             }
+            
+            #interface {
+                border: 1.5px solid #000000;
+                box-shadow: 0px 0px 10px #000000bd;
+                background-color: #fff;
 
-            #interface{
-                
                 @include interfaceBar();
                 @include centralizacaoPadrao();
-
-                section{
+        
+                section {
                     height: 166px;
                     @include centralizacaoPadrao();
                     flex-direction: row;
-
-                    div{
+        
+                    div {
                         @include centralizacaoPadrao()
                     }
                 }
-
-                img{
+        
+                img {
                     cursor: pointer;
                     width: 70px;
                 }
             }
-
         }
 
     }
