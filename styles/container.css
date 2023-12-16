@@ -55,6 +55,20 @@ body section#container {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  position: relative;
+}
+body section#container .dark-mode {
+  background-color: #e6e6e6;
+  border-radius: 30px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 body section#container .dark-mode-field-OFF {
   width: 50px;

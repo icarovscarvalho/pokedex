@@ -56,6 +56,9 @@ body main .interfaceGroupLight #interface section div {
   align-items: center;
   flex-direction: column;
 }
+body main .interfaceGroupLight #interface section div span {
+  cursor: pointer;
+}
 body main .interfaceGroupLight #interface img {
   cursor: pointer;
   width: 70px;

@@ -1,37 +1,9 @@
 const form = document.querySelector('#poke-busca-campo > form')
-const namePoke = document.querySelector('input')
+export const namePoke = document.querySelector('input')
 const pokeSprit = document.querySelector('div#poke-dados-campo-classSprit')
 const pokeClass = document.querySelector('div#poke-dados-campo-classType')
 
-//Chamada do evento de Submit do botão pokebola de busca
-form.addEventListener('submit', (event)=>{
-    //Inibindo o botão de reiniciar a página
-    event.preventDefault()
-
-    //Captura do valor no input de texto
-    const namePokeValue = namePoke.value
-
-    //Verificação de tamanho mínimo no input de busca
-    if (namePokeValue.length <= 0){
-        alert('Você deve digitar o nome do pokemon ou ID!')
-        return
-    }
-
-    //Chamando API com função assíncrona
-    const buscaPoke = async (pokemon) => {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${namePoke.value.toLowerCase()}`)
-
-        //Transformando resposta da API em arquivo JSON
-        const data = await response.json();
-        
-        //Definição dos atributos e valores principais
-        const dataBase = {
-            nome: data.name,
-            id: data.id,
-            tipo: data.types
-        }
-        
-        const colors = {
+const colors = {
             fire: '#f36c6c',
             grass: '#98d7a5',
             electric: '#ffe24f',
@@ -47,8 +19,26 @@ form.addEventListener('submit', (event)=>{
             normal: '#a4acaf',
             fighting: '#d56723',
             ice: '#85c1d3'
-        }
+}
 
+export const favoritPokemonsArr = []
+
+//Chamando API com função assíncrona
+export const buscaPoke = async (pokemon) => {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${namePoke.value.toLowerCase()}`)
+
+        favoritPokemonsArr.pop()
+        favoritPokemonsArr.push(namePoke.value)
+
+        //Transformando resposta da API em arquivo JSON
+        const data = await response.json();
+        
+        //Definição dos atributos e valores principais
+        const dataBase = {
+            nome: data.name,
+            id: data.id,
+            tipo: data.types
+        }
         //Criando imagem do Pokemon dinâmicamente
         pokeSprit.textContent = ''
 
@@ -108,7 +98,21 @@ form.addEventListener('submit', (event)=>{
         namePoke.value = ''
 
         //Monstra no console valores resultado da busca da API 
-        console.log(response)
+        // console.log(response)
+}
+
+//Chamada do evento de Submit do botão pokebola de busca
+form.addEventListener('submit', (event)=>{
+    //Inibindo o botão de reiniciar a página
+    event.preventDefault()
+
+    //Captura do valor no input de texto
+    const namePokeValue = namePoke.value
+
+    //Verificação de tamanho mínimo no input de busca
+    if (namePokeValue.length <= 0){
+        alert('Você deve digitar o nome do pokemon ou ID!')
+        return
     }
 
     //Chamada da função assíncrona

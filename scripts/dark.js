@@ -1,4 +1,5 @@
 const darkMode = document.getElementById('dark-mode-btn')
+const darkModeSpan = document.getElementById('dark-light-theme')
 const darkModeWord = document.getElementById('dark-mode-word')
 const darkModeTitle = document.querySelector('header>h1')
 const darkModeContainerImg = document.getElementById('container')
@@ -17,8 +18,10 @@ function darkAndLightMode() {
     darkModeTitle.classList.add('darkModeTitle');
     darkModeContainerImg.classList.remove('containerBG');
     darkModeContainerImg.classList.add('containerDarkModeBG');
+    darkModeSpan.textContent = 'dark_mode'
     // interfaceLight.classList.remove('interfaceGroupLight');
     // interfaceLight.classList.add('interfaceGroupDark');
+
     document.body.classList.add('bodyDarkModeBG');
     VerifyTrueorFalse = true
 
@@ -29,8 +32,10 @@ function darkAndLightMode() {
     darkModeTitle.classList.remove('darkModeTitle');
     darkModeContainerImg.classList.remove('containerDarkModeBG');
     darkModeContainerImg.classList.add('containerBG');
+    darkModeSpan.textContent = 'light_mode'
     // interfaceLight.classList.remove('interfaceGroupDark');
     // interfaceLight.classList.add('interfaceGroupLight');
+
     document.body.classList.remove('bodyDarkModeBG');
     VerifyTrueorFalse = false
 

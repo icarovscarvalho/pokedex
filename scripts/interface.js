@@ -1,6 +1,9 @@
+import {buscaPoke, favoritPokemonsArr} from './index.js'
+
+//====>====>====>====>====>====>====>====>====>
 const interfaceGroup = document.getElementById('interfaceGroup')
 const btnOpenClose = document.getElementById('btnOpenClose')
-const interface = document.getElementById('interface')
+const interfaceAside = document.getElementById('interface')
 
 const skinPokeball = {
     pkball: 'Pokebola.png',
@@ -37,7 +40,7 @@ function interfaceOpenClose() {
         // btnOpenClose.classList.remove('btnOpenClose')
         // interfaceGroup.classList.add('interfaceGroupOpen')
         // interface.classList.add('interfaceOpen')
-        interface.style.display = 'block'
+        interfaceAside.style.display = 'block'
 
         // btnOpenClose.addEventListener('mouseover', ()=>{
         //     interface.style.animation = 'none'
@@ -57,16 +60,16 @@ function interfaceOpenClose() {
 
         
 
-        interface.style.borderRadius = '10px';
-        interface.style.padding = '0px 20px'
-        interface.style.height = '500px';
-        interface.style.width = '200px';
-        interface.style.flexDirection = 'column';
-        interface.style.justifyContent = 'space-between'
-        interface.style.alignItems = 'center'
-        interface.style.animation = 'none' 
+        interfaceAside.style.borderRadius = '10px';
+        interfaceAside.style.padding = '0px 20px'
+        interfaceAside.style.height = '500px';
+        interfaceAside.style.width = '200px';
+        interfaceAside.style.flexDirection = 'column';
+        interfaceAside.style.justifyContent = 'space-between'
+        interfaceAside.style.alignItems = 'center'
+        interfaceAside.style.animation = 'none' 
 
-        interface.style.transition = '.5s ease-in-out .5s';
+        interfaceAside.style.transition = '.5s ease-in-out .5s';
 
     }else{
         interfaceGroup
@@ -78,7 +81,7 @@ function interfaceOpenClose() {
             btnOpenClose.style.animation = '1s linear 0s infinite alternate asideMoveShow'
         })
 
-        interface.style.display = 'none'
+        interfaceAside.style.display = 'none'
         btnOpenClose.classList.remove('btnOpenInterface')
 
         btnOpenClose.style.borderRadius = '50%';
@@ -98,7 +101,7 @@ function interfaceOpenClose() {
         span.classList.add('material-symbols-outlined')
         btnOpenClose.appendChild(span)
     
-        interface.style.transition = '.5s';
+        interfaceAside.style.transition = '.5s';
     }
 }
 
@@ -137,11 +140,10 @@ const createPokeballs= () => {
     section.appendChild(img);
 
     // Adicionando a seção ao elemento asideInterface
-    interface.appendChild(section);
+    interfaceAside.appendChild(section);
 
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
     //INTERAÇÃO COM A POKEBOLA - FAVORITAR
-    
     img.onclick = clickPokeballInsiderInterface
     function clickPokeballInsiderInterface(){
         console.log('gotcha')
@@ -154,6 +156,15 @@ const createPokeballs= () => {
         setTimeout(() => {
             img.classList.remove('rotatePokeball')
         },600); 
+
+        localStorage.setItem('pokemon', favoritPokemonsArr)
+    }
+    //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
+    //STAR - FUNÇÃO PESQUISAR FAVORITO
+    spanStar.onclick = showFavoritePokemon
+    function showFavoritePokemon() {
+        const storedPokemons = localStorage.getItem('pokemon');
+        buscaPoke(storedPokemons);
     }
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
     //MUDAR SKIN DA POKEBOLA
