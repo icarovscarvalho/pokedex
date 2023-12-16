@@ -111,7 +111,7 @@ btnOpenClose.addEventListener('click', () => {
 })
 //====>====>====>====>====>====>====>====>====>
 //FUNÃO DE CRIAÇÃO DAS POKEBOLAS
-const createPokeballs= () => {
+const createPokeballs= (storage) => {
     
     // Criando os elementos HTML
     const section = document.createElement('section');
@@ -127,6 +127,18 @@ const createPokeballs= () => {
     spanChangeCircle.classList.add('material-symbols-outlined');
 
     spanStar.textContent = 'star';
+
+    function setInitialStarTextContent() {
+        const storedStarText = localStorage.getItem(`starTextContent${storage}`);
+        if (storedStarText) {
+            spanStar.textContent = storedStarText;
+        }
+    }
+
+    const [textBase1, textBase2, textBase3] = [setInitialStarTextContent('1'),setInitialStarTextContent('2'),setInitialStarTextContent('3')]
+    
+    // Chame a função para definir o textContent do spanStar para cada slotBase
+
     spanChangeCircle.textContent = 'change_circle';
 
     img.src = `styles/media/${skinPokeball.pkball}`;
@@ -152,18 +164,20 @@ const createPokeballs= () => {
         //FAVORITAR STAR
         spanStar.classList.add('getFavoritePkmon')
         spanStar.textContent = 'star_half'
+
+        localStorage.setItem(`starTextContent${storage}`, spanStar.textContent);
  
         setTimeout(() => {
             img.classList.remove('rotatePokeball')
         },600); 
 
-        localStorage.setItem('pokemon', favoritPokemonsArr)
+        localStorage.setItem(`pokemon${storage}`, favoritPokemonsArr)
     }
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
     //STAR - FUNÇÃO PESQUISAR FAVORITO
     spanStar.onclick = showFavoritePokemon
     function showFavoritePokemon() {
-        const storedPokemons = localStorage.getItem('pokemon');
+        const storedPokemons = localStorage.getItem(`pokemon${storage}`);
         buscaPoke(storedPokemons);
     }
     //=>=>=>=>=>==>===>====>=====>======>========>==========>====>
@@ -184,5 +198,5 @@ const createPokeballs= () => {
     
 }
 //====>====>====>====>====>====>====>====>====>
-const [slotBase1, slotBase2, slotBase3] = [createPokeballs(),createPokeballs(),createPokeballs()]
+const [slotBase1, slotBase2, slotBase3] = [createPokeballs('1'),createPokeballs('2'),createPokeballs('3')]
 //====>====>====>====>====>====>====>====>====>

@@ -25,7 +25,8 @@ export const favoritPokemonsArr = []
 
 //Chamando API com função assíncrona
 export const buscaPoke = async (pokemon) => {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${namePoke.value.toLowerCase()}`)
+    const pokename = pokemon || namePoke.value.toLowerCase()
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokename}`)
 
         favoritPokemonsArr.pop()
         favoritPokemonsArr.push(namePoke.value)
