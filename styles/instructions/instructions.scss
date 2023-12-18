@@ -6,13 +6,6 @@
 }
 
 @mixin asideBar {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 0px 10px #000000bd;
-    background-color: #fff;
-
     &:hover {
         animation: 1s linear 0s infinite alternate asideMoveShow;
 
@@ -33,7 +26,14 @@ body {
     
     main {
        
-        aside#professor-Oak {
+        aside.professor-OakLight {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            border: 1.5px solid #000000;
+            box-shadow: 0px 0px 10px #000000bd;
+            background-color: #fff;
+
             @include asideBar();
             display: flex;
             align-items: center;

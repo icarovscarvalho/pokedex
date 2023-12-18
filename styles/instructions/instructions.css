@@ -1,4 +1,4 @@
-body main aside#professor-Oak {
+body main aside.professor-OakLight {
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -10,7 +10,7 @@ body main aside#professor-Oak {
   justify-content: center;
   cursor: pointer;
 }
-body main aside#professor-Oak:hover {
+body main aside.professor-OakLight:hover {
   animation: 1s linear 0s infinite alternate asideMoveShow;
 }
 @keyframes asideMoveShow {
@@ -21,14 +21,14 @@ body main aside#professor-Oak:hover {
     transform: translateY(0);
   }
 }
-body main aside#professor-Oak span {
+body main aside.professor-OakLight span {
   font-size: 1.5rem;
 }
-body main aside#professor-Oak h2 {
+body main aside.professor-OakLight h2 {
   font-size: 1.3rem;
   margin-top: 20px;
 }
-body main aside#professor-Oak p.instructions {
+body main aside.professor-OakLight p.instructions {
   margin-top: 30px;
   border: 1.5px solid #000000;
   border-radius: 10px;
@@ -36,6 +36,6 @@ body main aside#professor-Oak p.instructions {
   text-transform: none;
   text-align: center;
 }
-body main aside#professor-Oak img {
+body main aside.professor-OakLight img {
   width: 150px;
 }/*# sourceMappingURL=instructions.css.map */

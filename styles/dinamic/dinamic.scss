@@ -79,6 +79,44 @@
 //     }
 // }
 
+// aside.professor-OakDark {
+//     height: 70px;
+//     width: 70px;
+//     border-radius: 50%;
+//     border: 1.5px solid #a1a1a1;
+//     box-shadow: 0px 0px 5px #ffffff96;
+//     background-color: #000;
+//     color: #fff;
+
+//     @include interfaceBar();
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+    
+//     span {
+//         font-size: 1.5rem;
+//     }
+
+//     h2 {
+//         font-size: 1.3rem;
+//         margin-top: 20px;
+//     }
+
+//     p.instructions {
+//         margin-top: 30px;
+//         border: 1.5px solid #ffffff;
+//         border-radius: 10px;
+//         padding: 8px;
+//         text-transform: none;
+//         text-align: center;
+//     }
+
+//     img {
+//         width: 150px;
+//     }
+// }
+
 // .interfaceGroupDark{
 //     p {
 //         height: 70px;
@@ -86,11 +124,40 @@
 //         border-radius: 50%;
 //         border: 1.5px solid #a1a1a1;
 //         box-shadow: 0px 0px 5px #ffffff96;
-//         background-color: #fff;
+//         background-color: #000;
+//         color: #fff;
     
 //         @include interfaceBar();
 //         @include centralizacaoPadrao();
 //         cursor: pointer;
+//     }
+
+//     #interface {
+//         border: 1.5px solid #a1a1a1;
+//         box-shadow: 0px 0px 5px #ffffff96;
+//         background-color: #000;
+
+//         @include interfaceBar();
+//         @include centralizacaoPadrao();
+
+//         section {
+//             height: 166px;
+//             @include centralizacaoPadrao();
+//             flex-direction: row;
+
+//             div {
+//                 @include centralizacaoPadrao();
+
+//                 span {
+//                     cursor: pointer;
+//                 }
+//             }
+//         }
+
+//         img {
+//             cursor: pointer;
+//             width: 70px;
+//         }
 //     }
 // }
 //====>====>====>====>====>====>====>====>====>====>====>====>====>====>
@@ -102,35 +169,35 @@
 
 
 
-// .btnOpenInterface{
-//     width: 25px;
-//     height: 25px;
-//     background-color: #ee3434;
-//     color:#ffffff;
-//     margin: -35px 0px 10px 0px;
-// }
+.btnOpenInterface{
+    width: 25px;
+    height: 25px;
+    background-color: #ee3434;
+    color:#ffffff;
+    margin: -35px 0px 10px 0px;
+}
 
-// .interfaceGroupOpen{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
-//     justify-content: center;
-// }
+.interfaceGroupOpen{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
 
-// .interfaceOpen{
-//     display: block;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: flex-end;
+.interfaceOpen{
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 
-//     border-radius: 10px;
-//     padding: 0px 20px;
-//     height: 500px;
-//     width: 200px;
+    border-radius: 10px;
+    padding: 0px 20px;
+    height: 500px;
+    width: 200px;
 
-//     animation: none;
-//     transition: .5s ease-in-out .5s;
-// }
+    animation: none;
+    transition: .5s ease-in-out .5s;
+}
 
 // btnOpenClose.style.borderRadius='50%';
 // btnOpenClose.style.padding='0px'

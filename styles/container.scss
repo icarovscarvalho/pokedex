@@ -77,6 +77,10 @@ body {
             column-gap: 10px;
             justify-content: center;
             align-items: center;
+
+            span{
+                cursor: default;
+            }
         }
 
         .dark-mode-field-OFF{

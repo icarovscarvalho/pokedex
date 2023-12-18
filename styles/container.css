@@ -70,6 +70,9 @@ body section#container .dark-mode {
   justify-content: center;
   align-items: center;
 }
+body section#container .dark-mode span {
+  cursor: default;
+}
 body section#container .dark-mode-field-OFF {
   width: 50px;
   height: 20px;

@@ -55,4 +55,32 @@
 .rotatePokeball {
   rotate: 720deg;
   transition: 0.5s;
+}
+
+.btnOpenInterface {
+  width: 25px;
+  height: 25px;
+  background-color: #ee3434;
+  color: #ffffff;
+  margin: -35px 0px 10px 0px;
+}
+
+.interfaceGroupOpen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.interfaceOpen {
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 10px;
+  padding: 0px 20px;
+  height: 500px;
+  width: 200px;
+  animation: none;
+  transition: 0.5s ease-in-out 0.5s;
 }/*# sourceMappingURL=dinamic.css.map */

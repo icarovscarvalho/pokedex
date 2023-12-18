@@ -4,6 +4,7 @@ const darkModeWord = document.getElementById('dark-mode-word')
 const darkModeTitle = document.querySelector('header>h1')
 const darkModeContainerImg = document.getElementById('container')
 const interfaceLight = document.getElementById('interfaceGroup')
+const professorOakLight = document.getElementById('professor-Oak')
 
 
 
@@ -21,6 +22,8 @@ function darkAndLightMode() {
     darkModeSpan.textContent = 'dark_mode'
     // interfaceLight.classList.remove('interfaceGroupLight');
     // interfaceLight.classList.add('interfaceGroupDark');
+    // professorOakLight.classList.remove('professor-OakLight');
+    // professorOakLight.classList.add('professor-OakDark');
 
     document.body.classList.add('bodyDarkModeBG');
     VerifyTrueorFalse = true
@@ -35,6 +38,8 @@ function darkAndLightMode() {
     darkModeSpan.textContent = 'light_mode'
     // interfaceLight.classList.remove('interfaceGroupDark');
     // interfaceLight.classList.add('interfaceGroupLight');
+    // professorOakLight.classList.remove('professor-OakDark');
+    // professorOakLight.classList.add('professor-OakLight');
 
     document.body.classList.remove('bodyDarkModeBG');
     VerifyTrueorFalse = false

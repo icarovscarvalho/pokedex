@@ -9,7 +9,7 @@ const skinPokeball = {
     pkball: 'Pokebola.png',
     gtball: 'Greatball.png',
     utball: 'Ultraball.png',
-    mtball: 'Masterball.png'   
+    mtball: 'Masterball.png',  
 }
 
 //====>====>====>====>====>====>====>====>====>
