@@ -15,8 +15,7 @@ html {
 }
 
 body {
-  width: 90vw;
-  height: 95vw;
+  height: 100dvh;
   background: url(media/bg-branco.avif) no-repeat;
   background-size: cover;
   display: flex;
